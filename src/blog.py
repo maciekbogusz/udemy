@@ -13,7 +13,6 @@ class Blog:
                                              's' if len(self.posts) != 1 else '') 
     
     def create_post(self, title, content):
-       # self.posts.append(Post(title, content))
         self.posts.append(Post(title, content))
     
     def json(self):
