@@ -1,12 +1,12 @@
 from blog import Blog
 
 MENU_PROMPT = 'Enter "c" to create a blog, "l" to list blogs, "r" to read one, "p" to create a post, or "q" to quit'
-POST_TEMPLATE =''' 
+POST_TEMPLATE ="""
 --- {} ---
-    
+
 {}
 
-'''
+"""
 blogs = dict()
 
 def menu():
@@ -48,4 +48,9 @@ def print_post(post):
       
     
 def ask_create_post():
-    pass
+    blog_name = input('Enter the blog title you want to write a post in: ')
+    title = input('Enter your post title: ')
+    content = input('Enter your post content: ')
+    
+    blogs[blog_name].create_post(title, content)
+        
