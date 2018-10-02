@@ -9,6 +9,7 @@ POST_TEMPLATE ="""
 """
 blogs = dict()
 
+
 def menu():
     print_blogs()
     selection = input(MENU_PROMPT)
@@ -53,4 +54,4 @@ def ask_create_post():
     content = input('Enter your post content: ')
     
     blogs[blog_name].create_post(title, content)
-        
+

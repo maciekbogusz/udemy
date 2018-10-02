@@ -44,15 +44,14 @@ class AppTest(TestCase):
                
                 mocked_print_posts.assert_called_with(blog)
  
-#     def test_print_posts(self):
-#         blog = app.blogs['Test']
-#         blog.create_post('Post title', 'Post content')
-#         app.blogs = {'Test': blog }
-#               
-#         with patch('app.print_posts') as mocked_print_post:
-#             app.print_posts(blog)
-#               
-#             mocked_print_post.assert_called_with(blog.posts[0])
+    def test_print_posts(self):
+        blog = app.blogs['Test']
+        blog.create_post('Post title', 'Post content')
+        app.blogs = {'Test': blog }
+        with patch('app.print_posts') as mocked_print_post:
+            app.print_posts(blog)
+             
+            mocked_print_post.assert_called_with(blog.posts[0])
 
              
     def test_print_post(self):
